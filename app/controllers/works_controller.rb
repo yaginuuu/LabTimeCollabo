@@ -1,9 +1,9 @@
-class HomeController < ApplicationController
+class WorksController < ApplicationController
 	def index
     unless current_user
       redirect_to root_path
     else
-		  @tl = home_timeline_from_twitter
+		  #@tl = home_timeline_from_twitter
     end
 	end
 

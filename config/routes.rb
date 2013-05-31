@@ -3,7 +3,9 @@ LabTimeCollabo::Application.routes.draw do
   get "/auth/failure" => "sessions#failure"
   get "/logout" => "sessions#destroy", :as => :logout
   root :to => 'top#index'
-  resources :home
+  get ':controller(/:action(/:id))(.:format)'
+  post '/in', :to => 'works#in'
+  post '/out', :to => 'works#out'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

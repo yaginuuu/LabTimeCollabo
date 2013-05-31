@@ -43,7 +43,7 @@ class ApplicationController < ActionController::Base
     if params[:controller] == "top"
       # ログイン済みであればhomeへリダイレクト
       unless session[:user_id].blank?
-        redirect_to controller: "home" and return
+        redirect_to controller: "works" and return
       end
     end
   end
