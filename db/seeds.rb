@@ -1,25 +1,7 @@
 #coding:utf-8
 
-Laboratory.create(:name => '猪俣研')
-Laboratory.create(:name => 'CA研')
-Laboratory.create(:name => '澤本研')
-Laboratory.create(:name => '村田研')
-Laboratory.create(:name => '高田Ⅰ研')
-Laboratory.create(:name => '高田Ⅱ研')
-Laboratory.create(:name => '菅原Ⅰ研')
-Laboratory.create(:name => '菅原Ⅱ研')
-Laboratory.create(:name => '佐々木研')
-Laboratory.create(:name => '渡邊研')
-Laboratory.create(:name => '阿部昭研')
-Laboratory.create(:name => '伊藤研')
-Laboratory.create(:name => '柴田研')
-Laboratory.create(:name => '村山研')
-Laboratory.create(:name => 'CG研')
-Laboratory.create(:name => '布川研')
-Laboratory.create(:name => '石亀・伊藤（慶）研')
-Laboratory.create(:name => 'ゴウタム研')
-Laboratory.create(:name => '藤田研')
-Laboratory.create(:name => '小方研')
+Lab = %w(猪俣研 CA研 澤本研 村田研 高田1研 高田2研 菅原1研 菅原2研 佐々木研 渡邊研 阿部研 伊藤研 柴田研 村山研 CG研 布川研 石亀研 藤田研 小方研)
+Lab.each{ |n| Laboratory.create(:name => n)}
 
-
+puts "Lab push complete!!"
 

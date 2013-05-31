@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130531161946) do
+ActiveRecord::Schema.define(version: 20130531162629) do
 
   create_table "laboratories", force: true do |t|
     t.string   "name"
@@ -28,6 +28,13 @@ ActiveRecord::Schema.define(version: 20130531161946) do
     t.string   "token"
     t.string   "secret"
     t.string   "laboratory_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "works", force: true do |t|
+    t.string   "user_id"
+    t.string   "work_time"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
